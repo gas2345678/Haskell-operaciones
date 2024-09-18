@@ -10,7 +10,7 @@ esImpar x  = if mod x 2 /= 0 then True else False
 
 
 
-menores :: Int -> Int -> Int 
+menores :: Int -> Int -> String
 
 
 menores x y | x == y = "error,son iguales"
@@ -53,6 +53,14 @@ esPar :: Integer -> Bool
 
 
 esPar x = if mod x 2  == 0 then True else False
+
+
+esFactorial :: Integer -> Integer  
+
+
+
+esFactorial x = if x == 0 then 1
+                else x * esFactorial (x-1)
 
 
 
