@@ -62,7 +62,8 @@ esFactorial x = if x == 0 then 1
                 else x * esFactorial (x-1)
 
 
-
+fib :: Integer -> Integer 
+fib x |
 
 
 
