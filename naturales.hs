@@ -69,7 +69,7 @@ posmax p num = if p num then num else then posmax p (num - 1)
 
 fib:: Integer -> Integer 
 
-fib x = if x == 0 then 0 else fib(x-1) + fib (x-2)
+fib x  = if x == 0  then 0 else fib(x-1) + fib (x-2)
 
 
 
