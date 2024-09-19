@@ -3,17 +3,16 @@
 
 
 
- 
+ --Verifica si es impar
 
 esImpar :: Integer -> Bool 
 esImpar x  = if mod x 2 /= 0 then True else False 
 
+--Confirma si son equivalentes
 
+equivalente :: Integer -> Integer -> String
+equivalente x y = if x == y then "Son igua
 
-menores :: Int -> Int -> String
-
-
-menores x y | x == y = "error,son iguales"
 
 
 
@@ -32,8 +31,8 @@ verifica x | esPar x =  "Es par"
 
 
 
---Ejericios de practico 
 
+--Toma el menor de los valores dados
 
 menor :: Integer -> Integer -> Bool 
 
@@ -53,7 +52,7 @@ esPar :: Integer -> Bool
 
 
 esPar x = if mod x 2  == 0 then True else False
-
+--Funcion de Factoriales
 
 esFactorial :: Integer -> Integer  
 
