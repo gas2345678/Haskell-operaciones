@@ -11,7 +11,7 @@ esImpar x  = if mod x 2 /= 0 then True else False
 --Confirma si son equivalentes
 
 equivalente :: Integer -> Integer -> String
-equivalente x y = if x == y then "Son igua
+equivalente x y = if x == y then 'son iguales' else 'No son iguales'
 
 
 
