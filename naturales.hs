@@ -64,13 +64,15 @@ esFactorial x = if x == 0 then 1
 
 posmax:: (Integer -> Bool) -> Integer -> Integer
 posmax p 0 = 0
-posmax p num = if p num then num else then posmax p (num - 1)
+posmax p num = if p num then num else then posmax p 
 
 
-fib:: Integer -> Integer 
 
-fib x  = if x == 0  then 0 else fib(x-1) + fib (x-2)
+fib :: Integer -> Integer
 
+fib 0=0
+fib 1=1
+fib n= (n-1) + (n-2)
 
 
 
