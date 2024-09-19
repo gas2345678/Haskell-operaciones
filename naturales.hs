@@ -63,8 +63,8 @@ esFactorial x = if x == 0 then 1
 
 
 posmax:: (Integer -> Bool) -> Integer -> Integer
-
-posmax p num = if p num then num else then 0
+posmax p 0 = 0
+posmax p num = if p num then num else then posmax p (num - 1)
 
 
 
