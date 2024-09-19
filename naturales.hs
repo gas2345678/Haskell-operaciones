@@ -16,7 +16,6 @@ equivalente x y = if x == y then 'son iguales' else 'No son iguales'
 
 
 
-
 --Verifica si es un natural
 esNatural :: Integer -> String
 esNatural x = if x > 0 then  "es un natural" else  "no es un natural"
@@ -62,8 +61,10 @@ esFactorial x = if x == 0 then 1
                 else x * esFactorial (x-1)
 
 
-fib :: Integer -> Integer 
-fib x |
+
+posmax:: (Integer -> Bool) -> Integer -> Integer
+
+posmax p num = if p num then num else then 0
 
 
 
