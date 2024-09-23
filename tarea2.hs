@@ -38,6 +38,18 @@ esdivisor n k | mod k n == 0 = True
 
 
 
+sumaentref.p :: (N -> Bool) -> (N -> N) -> N -> N -> N
+
+sumaentref.p p f m n | n > m = 0
+                     | not p m = sumaentref.p p f (m+1) n 
+                     | otherwise = m + sumaentref.p p f (m+1) n
+
+
+
+
+
+
+
 
 
 
