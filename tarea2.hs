@@ -26,3 +26,25 @@ esdivisor n k | mod k n == 0 = True
                | otherwise = False
 
 
+
+
+
+
+
+
+
+
+
+
+--4 
+
+sumap2 :: (N -> Bool) -> N -> N
+
+sumap2 p m n | n > m = 0
+              | not p m n = putStrLn 'No cumple'
+              | otherwise = m + sumap2 p (m **2) n
+
+         
+
+
+
