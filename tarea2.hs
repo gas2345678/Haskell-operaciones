@@ -8,7 +8,7 @@ sumaentre m n | n > m = 0
 1--R1:El resultado es 14
 --Funcion sumaentre.f
 
-sumaentref :: N -> N -> f -> N
+sumaentref :: (N -> N) -> N -> N -> N
 
 
 sumaentref m n f | m =0 || n = 0 = 0
