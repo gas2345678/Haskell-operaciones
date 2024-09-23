@@ -1,6 +1,6 @@
 --Tarea2-Naturales
 
-
+--1
 --Funcion sumaentre
 sumaentre :: N -> N -> N
 sumaentre m n | n > m = 0
@@ -12,4 +12,17 @@ sumaentref :: N -> N -> f -> N
 
 
 sumaentref m n | m =0 || n = 0 = 0
-               | otherwise f m + sumaentref(f m+1) n 
+               | otherwise = f m + sumaentref(f m+1) n 
+
+
+
+
+
+
+
+--2 
+esdivisor :: N -> N
+esdivisor n k | mod k n == 0 = True
+               | otherwise = False
+
+
