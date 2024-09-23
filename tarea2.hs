@@ -57,8 +57,8 @@ sumaentref.p p f m n | n > m = 0
 --4 
 cantidad.p :: (N -> Bool) -> N -> N -> N
 cantidad.p p m n | n > m = 0
-                  | p m = True
-                 | otherwise = m + cantidad.p p (m+1) n
+                  | p m = 1 + cantidad.p p (m+1) n
+                 | otherwise =  cantidad.p p (m+1) n
                   
 
 sumap2 :: (N -> Bool) -> N -> N -> N
