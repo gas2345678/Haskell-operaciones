@@ -36,6 +36,12 @@ esdivisor n k | mod k n == 0 = True
 
 
 
+
+
+
+
+
+
 --4 
 
 sumap2 :: (N -> Bool) -> N -> N
