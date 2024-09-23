@@ -47,13 +47,16 @@ esdivisor n k | mod k n == 0 = True
 sumap2 :: (N -> Bool) -> N -> N
 
 sumap2 p m n | n > m = 0
-              | not p m n = putStrLn 'No cumple'
-              | otherwise = m + sumap2 p (m **2) n
+              | not p m  = sumap2 p (m+1) n
+              | otherwise = m *m + sumap2 p (m+1) n
 
 
 existe.p :: (N-> Bool) -> N -> N -> Bool 
-existe.p p m n | n > n = 0 
-               | p m n = True 
+existe.p p m n | m > n = False 
+               | p m = True 
+               | otherwise = m + existe.p p(m+1) n
+
+
 
          
 
