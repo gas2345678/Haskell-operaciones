@@ -29,7 +29,8 @@ esdivisor n k | mod k n == 0 = True
 
 
 
-
+--3 
+primer.divisor :: (N -> Bool) -> N -> N
 
 
 
