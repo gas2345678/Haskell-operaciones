@@ -11,12 +11,12 @@ sumaentre m n | n > m = 0
 sumaentref :: (N -> N) -> N -> N -> N
 
 
-sumaentref m n f | m =0 || n = 0 = 0
-               | otherwise = f m + sumaentref(f m+1) n 
+sumaentref m n f | n < m =0
+               | otherwise = f m + sumaentref f (m+1) n 
 maximo.acotado :: (N -> Bool) -> N -> N -> N
-minimo.acotado p m n | n < m = 0
-                      | not (p m)  = maximo.acotado p (m+1) n
-                      | p m && n == m = m
+maximo.acotado p m n | n < m = 0
+                      | not (p n)  = maximo.acotado p m (n - 1)
+                      | p n = n
 
 
 
@@ -26,13 +26,14 @@ minimo.acotado p m n | n < m = 0
 
 --2 
 esdivisor :: N -> N
-esdivisor n k | mod k n == 0 = True
+esdivisor n k | mod n k == 0 = True
                | otherwise = False
 
 primer.divisor :: N -> N
-primer.divisor n | n < 2 = False 
-                 | esdivisor n n = False
-                  | otherwise = n 
+primer.divisor n | n < x = ""error no has ingresado un numero valido""
+      
+                 | esdivisor n x = x
+                  | otherwise = aux n (x + 1)
                   
                   
                   
