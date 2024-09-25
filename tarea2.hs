@@ -79,7 +79,7 @@ sumap2 :: (N -> Bool) -> N -> N -> N
 
 sumap2 p m n | n > m = 0
               | not p m  = sumap2 p (m+1) n
-              | otherwise = m *1 + sumap2 p (m+1) 
+              | otherwise = m *m + sumap2 p (m+1) 
 
 todosp :: (N-> Bool) -> N -> N -> Bool
 todos p m n | n > m = 0
