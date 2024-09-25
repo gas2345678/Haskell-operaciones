@@ -29,14 +29,21 @@ esdivisor :: N -> N
 esdivisor n k | mod k n == 0 = True
                | otherwise = False
 
+primer.divisor :: N -> N
+primer.divisor n | n < 2 = False 
+                 | esdivisor n n = False
+                  | otherwise = n 
+                  
+                  
+                  
+
 
 
 
 
 --3 
-primer.divisor :: (N -> Bool) -> N -> N
-primer.divisor p m n | n > m = 0
-                      | 
+
+                      
 
 
 --3 en este caso, retornaria m
