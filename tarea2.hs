@@ -30,7 +30,7 @@ esdivisor n k | mod n k == 0 = True
                | otherwise = False
 
 primer.divisor :: N -> N
-primer.divisor n | n < x = ""error no has ingresado un numero valido""
+primer.divisor n | n < x = error ""no has ingresado un numero valido""
       
                  | esdivisor n x = x
                   | otherwise = aux n (x + 1)
