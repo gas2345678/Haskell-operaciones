@@ -31,7 +31,8 @@ esdivisor n k | mod k n == 0 = True
 
 --3 
 primer.divisor :: (N -> Bool) -> N -> N
-
+primer.divisor p m n | n > m = 0
+                      | 
 
 
 --3 en este caso, retornaria m
