@@ -13,6 +13,10 @@ sumaentref :: (N -> N) -> N -> N -> N
 
 sumaentref m n f | m =0 || n = 0 = 0
                | otherwise = f m + sumaentref(f m+1) n 
+maximo.acotado :: (N -> Bool) -> N -> N -> N
+minimo.acotado p m n | n < m = 0
+                      | not (p m)  = maximo.acotado p (m+1) n
+                      | p m && n == m = m
 
 
 
