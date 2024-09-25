@@ -34,6 +34,10 @@ primer.divisor n | n < x = error ""no has ingresado un numero valido""
       
                  | esdivisor n x = x
                   | otherwise = aux n (x + 1)
+
+es.primo :: N -> Bool
+es.primo n | not esdivisor 1 n =  False
+            | esdivisor 1 n && esdivisor n n = True
                   
                   
                   
