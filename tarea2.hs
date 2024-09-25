@@ -33,7 +33,7 @@ esdivisor n k | mod k n == 0 = True
 
 
 
-
+--3 en este caso, retornaria m
 
 
 
