@@ -1,0 +1,1 @@
+arbol :: Integer -> Integer
