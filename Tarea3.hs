@@ -14,15 +14,46 @@ let filesystem = Dir raiz [dir Musica [dir Jazz [ A mumbles.mp3] dir rock [ A cl
 
 
 
---3
+
+--Ejercicio3
 contenido :: FS -> [Nombre]
-contenido 
+contenido A archivo = archivo 
+contenido dir directorio (x:xss) = x : (contenido xss)
 
 
---4 
-CantA :: FS -> Int 
-CantA [] = 0
-cantA dir:[A] = 1 + cantA [A]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--Ejercicio4
+CantA :: FS -> Int
+CantA dir directorio [xs:xss] = 1 + (cantA xss)
+
+--Ejercicio5
+niveles :: FS -> Int 
+niveles A archivo  = 0
+niveles dir (x:xss)  = 
+
+
+
+
+
+--Ejercicio6
+
+pertenece :: Nombre -> FS -> Bool
+pertenece x (FS) | [] = False
+                 | elem x (FS) =  True
+                 | otherwise = False
 
   
 
