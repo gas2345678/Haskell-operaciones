@@ -14,7 +14,9 @@ altura(Node x izq der) | Node x izq > Node x der = length Node x izq
 
 
 --Ejercicio4
-isOrder :: ABB a -
+CantA :: FS -> Int
+CantA dir directorio [xs:xss] = 1 + (cantA xss)
+
 
 
 
@@ -25,4 +27,8 @@ pertenece :: Nombre -> FS -> Bool
 pertenece x (FS) | [] = False
                  | elem x (FS) =  True
                  | otherwise = False
+
+
+
+
                  
