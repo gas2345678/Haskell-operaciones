@@ -15,3 +15,14 @@ altura(Node x izq der) | Node x izq > Node x der = length Node x izq
 
 --Ejercicio4
 isOrder :: ABB a -
+
+
+
+
+--Ejercicio6
+
+pertenece :: Nombre -> FS -> Bool
+pertenece x (FS) | [] = False
+                 | elem x (FS) =  True
+                 | otherwise = False
+                 
