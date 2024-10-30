@@ -9,6 +9,10 @@ altura(Node x izq der) | Node x izq > Node x der = length Node x izq
 
 
 
+--Ejercicio3
+contenido :: FS -> [Nombre]
+contenido A archivo = archivo 
+contenido dir directorio (x:xss) = x : (contenido xss)
 
 
 
