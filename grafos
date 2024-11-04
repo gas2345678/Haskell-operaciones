@@ -8,3 +8,7 @@ Rb: grado 3
 c)Cual es el grado de salida del vertice "e"?
 Rc: grado 3
 
+ --| Representacion del grafo |
+grafo :: Grafo
+grafo = [(f,[a,b,c]),(b,[d,e,f]),(a,[f,e],(d[f,d,e])
+
