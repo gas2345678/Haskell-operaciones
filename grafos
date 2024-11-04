@@ -26,6 +26,15 @@ Cual es el grado de salida del vertice "d"?
 Rc:Grado 2
 
 
+|Ejercicio 3 |
+
+
+1)
+construirgrafo :: Int -> Grafo 
+contruirgrafo n | n == 0 = []
+                | n 
+
+
 
 
 
