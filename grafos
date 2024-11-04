@@ -1,5 +1,5 @@
-Ejercicio 1 
 
+Ejercicio 1 
 a)¿El grafo del dibujo es dirigido o no dirigido?
 
 Ra:No es dirigido
@@ -11,4 +11,24 @@ Rc: grado 3
  --| Representacion del grafo |
 grafo :: Grafo
 grafo = [(f,[a,b,c]),(b,[d,e,f]),(a,[f,e],(d[f,d,e])
+
+
+|Ejercicio 2|
+
+a)¿El grafo del dibujo es dirigido o no dirigido?
+
+Ra: Es dirigido(-->)
+
+Cual es el grado de entrada del vertice "d"?
+Cual es el grado de salida del vertice "d"?
+
+
+
+
+
+
+
+
+
+
 
