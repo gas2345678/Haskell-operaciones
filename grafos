@@ -20,8 +20,10 @@ a)¿El grafo del dibujo es dirigido o no dirigido?
 Ra: Es dirigido(-->)
 
 Cual es el grado de entrada del vertice "d"?
-Cual es el grado de salida del vertice "d"?
+Rb: Grado 1
 
+Cual es el grado de salida del vertice "d"?
+Rc:Grado 2
 
 
 
