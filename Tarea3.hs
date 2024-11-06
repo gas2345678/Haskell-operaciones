@@ -41,10 +41,11 @@ contenido dir directorio (x:xss) |  [] = []
 CantA :: FS -> Int
 CantA dir directorio [xs:xss] | A xs = 1 + CantA (xss)
 
---Ejercicio5
-niveles :: FS -> Int 
-niveles A archivo  = 0
-niveles dir (x:xss)  
+--Ejercicio 5
+niveles -> FS-> Int
+niveles A archivo = 0
+niveles dir (xs:xss) = if dir xs then niveles (xss)
+
 
 
 
