@@ -42,7 +42,7 @@ CantA dir directorio [xs:xss] = 1 + (cantA xss)
 --Ejercicio5
 niveles :: FS -> Int 
 niveles A archivo  = 0
-niveles dir (x:xss)  = 
+niveles dir (x:xss)  
 
 
 
@@ -54,6 +54,10 @@ pertenece :: Nombre -> FS -> Bool
 pertenece x (FS) | [] = False
                  | elem x (FS) =  True
                  | otherwise = False
+
+--Ejercicio 7
+cambiarNombre :: Nombre -> Nombre -> FS -> FS
+cambiarNombre nombre1 nombre2 dir directorio(nombre2:nombre1) = dir directorio : (nombre1:nombre2)
 
   
 
