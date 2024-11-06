@@ -20,7 +20,7 @@ contenido :: FS -> [Nombre]
 
 contenido dir directorio (x:xss) |  [] = []
                            
-                                      [] : = x : (contenido xss)
+                                 |   otherwise =  [] : = x : (contenido xss)
 
 
 
