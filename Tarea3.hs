@@ -17,8 +17,10 @@ let filesystem = Dir raiz [dir Musica [dir Jazz [ A mumbles.mp3] dir rock [ A cl
 
 --Ejercicio3
 contenido :: FS -> [Nombre]
-contenido A archivo = archivo 
-contenido dir directorio (x:xss) = x : (contenido xss)
+
+contenido dir directorio (x:xss) |  [] = []
+                           
+                                      [] : = x : (contenido xss)
 
 
 
