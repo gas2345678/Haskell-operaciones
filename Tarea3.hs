@@ -17,10 +17,7 @@ let filesystem = Dir raiz [dir Musica [dir Jazz [ A mumbles.mp3] dir rock [ A cl
 
 --Ejercicio3
 contenido :: FS -> [Nombre]
-
-contenido dir directorio (x:xss) |  [] = []
-                           
-                                 |   otherwise =  [] :  x : (contenido xss)
+contenido (x:xss) = [] : x : (contenido xss)
 
 
 
@@ -54,13 +51,12 @@ niveles dir (xs:xss) = if dir xs then niveles (xss)
 --Ejercicio6
 
 pertenece :: Nombre -> FS -> Bool
-pertenece x (FS) | [] = False
-                 | elem x (FS) =  True
-                 | otherwise = False
-
+pertenece x (xs:xss) | x == xs = True
+                     | not (x==xs) = pertenece  x xss
+                     | otherwise = False
 --Ejercicio 7
 cambiarNombre :: Nombre -> Nombre -> FS -> FS
-cambiarNombre nombre1 nombre2 dir directorio(nombre2:nombre1) = dir directorio : (nombre1:nombre2)
+cambiarNombre nombre1 nombre2 = nombre2 nombre1
 
   
 
