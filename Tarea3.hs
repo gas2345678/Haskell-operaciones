@@ -13,7 +13,7 @@ let filesystem = Dir raiz [dir Musica [dir Jazz [ A mumbles.mp3] dir rock [ A cl
 --Ejercicio 2
  nombre :: FS -> Nombre
 nombre A archivo = archivo
-nombre dnombre(xs:xss) = 
+nombre dnombre(xs:xss) = nombre
 
 
 
