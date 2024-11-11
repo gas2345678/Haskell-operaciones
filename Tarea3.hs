@@ -41,7 +41,7 @@ CantA dir directorio [xs:xss] | A xs = 1 + CantA (xss)
 --Ejercicio 5
 niveles -> FS-> Int
 niveles A archivo = 0
-niveles dir (xs:xss) = if dir xs then niveles (xss)
+niveles dir (xs:xss)
 
 
 
