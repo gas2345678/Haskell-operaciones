@@ -36,7 +36,8 @@ contenido (x:xss) = [] : x : (contenido xss)
 
 --Ejercicio4
 CantA :: FS -> Int
-CantA dir directorio [xs:xss] | A xs = 1 + CantA (xss)
+CantA A archivo = 1
+CantA dir dnombre (x:xs) | dir x = CantA (dnombre x) + CantA (dnombre xs)
 
 --Ejercicio 5
 niveles -> FS-> Int
