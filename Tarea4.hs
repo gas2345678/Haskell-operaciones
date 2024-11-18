@@ -4,8 +4,9 @@ type Vertice = Int
 type Arista = (Vertice,Vertice)
 data Grafo = [(Arista,[Vertice])]
 type Costo = Int
+type Ciudad = String
 
-data Vuelo (String,Costo)
+data Vuelo (Ciudad,Costo)
 data Mapavuelos = [Vuelo,(Vuelo)]
 
 
