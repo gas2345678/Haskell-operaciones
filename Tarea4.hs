@@ -1,7 +1,9 @@
 --Ejercicio4
 --Grafos
-type Ciudad = String
 type Costo = Int
+type Ciudad = String
+
+
 type Vuelo = (String,Costo)
 type Costos = [Vuelo]
 
