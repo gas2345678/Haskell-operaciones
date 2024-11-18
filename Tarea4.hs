@@ -55,7 +55,8 @@ CostoCiudad ciudad (x,xi): (xs,xss) | [] = 0
 actualizarCosto :: Costos -> Ciudad -> Costo -> Costo
 actualizarCosto ((x,xss):xs) ciudad costo | x == ciudad && xs < costo = x : costo : actualizarCosto xs 
 --6
-listaAdyentes :: CIUDAD ->
+listaAdyentes :: (Ciudad,[(Ciudad,Costos)]) -> Costos -> Costos
+listaAdyentes (x,(xs,xdd:xd,xss)) ((mm,m) :mo)
 
 
 --8
