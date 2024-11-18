@@ -49,7 +49,7 @@ CostoCiudad ciudad (x,xi): (xs,xss) | [] = 0
                                       | otherwise = CostoCiudad xs
 --5 
 actualizarCosto :: Costos -> Ciudad -> Costo -> Costo
-actualizarCosto ((x,xss):xs) ciudad costo | x == ciudad && xs < costo = 
+actualizarCosto ((x,xss):xs) ciudad costo | x == ciudad && xs < costo = x : costo : actualizarCosto xs 
 
 
 
