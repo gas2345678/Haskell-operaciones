@@ -1,8 +1,9 @@
 --Ejercicio4
 --Grafos
 type Ciudad = String
-type Costo = (Ciudad,Integer)
-data Costos = [Costo]
+type Costo = Int
+data Costos = (Ciudad,Int)
+
 
 
 
