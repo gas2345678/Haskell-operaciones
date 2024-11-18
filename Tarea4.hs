@@ -2,7 +2,7 @@
 --Grafos
 type Vertice = Int
 type Arista = (Vertice,Vertice)
-data Grafo = [(Vertice,[Arista])]
+data Grafo = [(Arista,[Vertice])]
 
 
 
@@ -14,6 +14,8 @@ let grafo = [(1,[2,3]),(2,[4]),(3,[4,5]),(5,[6]),[(4,[6]),(6,[])]
 
 
 let visitados = []
+
+recorrido = [(1,0),[(2,2),(4,3),(6,2),(6,5)]
 
 
 
