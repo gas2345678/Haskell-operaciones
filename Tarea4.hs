@@ -61,9 +61,11 @@ listaAdyentes :: CIUDAD ->
 --8
 ciudadmenorcosto :: Costos -> Visitadas -> Ciudad
 ciudadmenorcosto ((x,xs) :xss) visitadas | [] = error 'no se pudo comprobar'
+                          
                                           
                                            | not(elem (x,xs) visitadas) = min xs
                                              | otherwise = ciudadmenorcosto xss
+ciudadmenorcosto (x,xs) visitadas = x
   
 
 
