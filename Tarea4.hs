@@ -4,10 +4,13 @@ type Vertice = Int
 type Arista = (Vertice,Vertice)
 data Grafo = [(Arista,[Vertice])]
 type Costo = Int
-type Ciudad = String
+
+
+
 
 data Vuelo (Ciudad,Costo)
 data Mapavuelos = [Vuelo,(Vuelo)]
+data Costos = [Vuelos]
 
 
 
@@ -34,6 +37,9 @@ ciudades ((x,xs) :xss) = [] : x : ciudades xss
 
 initialCost :: [Ciudad] -> Costos
 initialCost (x,_) :(xs,_) = [] : (x,inf) : initialCost (xs,_)
+
+
+CostoCiudad :: Ciudad -> (Costos
 
 
 
