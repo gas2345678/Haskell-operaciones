@@ -2,7 +2,9 @@
 --Grafos
 type Ciudad = String
 type Costo = Int
-data Costos = (Ciudad,Costo)
+type Vuelo = (String,Costo)
+type Costos = [Vuelo]
+
 
 
 
@@ -40,7 +42,9 @@ initialCost (x,_) :(xs,_) = [] : (x,inf) : initialCost (xs,_)
 
 --4
 CostoCiudad :: Ciudad -> Costos -> Costo
-CostoCiudad ciudad (x,xs) : xss
+CostoCiudad ciudad (x,xi): (xs,xss) | [] = 0
+                                      | ciudad == x = xi
+                                      | otherwise = CostoCiudad xs
 
 
 
