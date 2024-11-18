@@ -2,7 +2,9 @@
 --Grafos
 type Ciudad = String
 type Costo = Int
-data Costos = (Ciudad,Int)
+data Costos = (Ciudad,Costo)
+
+
 
 
 
@@ -37,7 +39,8 @@ initialCost :: [Ciudad] -> Costos
 initialCost (x,_) :(xs,_) = [] : (x,inf) : initialCost (xs,_)
 
 --4
-CostoCiudad :: Ciudad -> Costos
+CostoCiudad :: Ciudad -> Costos -> Costo
+CostoCiudad ciudad (x,xs) : xss
 
 
 
