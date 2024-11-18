@@ -4,8 +4,11 @@ type Costo = Int
 type Ciudad = String
 
 
+
 type Vuelo = (Ciudad,Costo)
 type Costos = [Vuelo]
+
+let visitadas = []
 
 
 
