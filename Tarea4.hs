@@ -39,7 +39,7 @@ initialCost :: [Ciudad] -> Costos
 initialCost (x,_) :(xs,_) = [] : (x,inf) : initialCost (xs,_)
 
 
-CostoCiudad :: Ciudad -> (Costos
+CostoCiudad :: Ciudad -> Costos
 
 
 
