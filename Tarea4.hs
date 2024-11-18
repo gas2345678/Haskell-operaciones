@@ -6,6 +6,7 @@ type Ciudad = String
 
 
 type Vuelo = (Ciudad,Costo)
+data mapavuelos = [Vuelo]
 type Costos = [Vuelo]
 
 let visitadas = []
