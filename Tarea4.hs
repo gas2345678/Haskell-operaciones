@@ -43,7 +43,7 @@ ciudades :: Mapavuelos -> [Ciudad]
 ciudades ((x,xs) :xss) = [] : x : ciudades xss
 --3
 initialCost :: [Ciudad] -> Costos
-initialCost (x,_) :(xs,_) = [] : (x,inf) : initialCost (xs,_)
+initialCost (x,xs) = [] : (x,inf) : initialCost (xs)
 
 --4
 CostoCiudad :: Ciudad -> Costos -> Costo
@@ -57,7 +57,8 @@ actualizarCosto ((x,xss):xs) ciudad costo | x == ciudad && xs < costo = x : cost
 
 
 
-
+ciudadmenorcosto :: Costos -> Visitadas -> Ciudad
+ciudadmenorcosto (x,xs) 
 
 
 
