@@ -54,12 +54,14 @@ CostoCiudad ciudad (x,xi): (xs,xss) | [] = 0
 --5 
 actualizarCosto :: Costos -> Ciudad -> Costo -> Costo
 actualizarCosto ((x,xss):xs) ciudad costo | x == ciudad && xs < costo = x : costo : actualizarCosto xs 
+--6
+listaAdyentes :: CIUDAD ->
 
 
-
-
+--8
 ciudadmenorcosto :: Costos -> Visitadas -> Ciudad
 ciudadmenorcosto ((x,xs) :xss) visitadas | [] = error 'no se pudo comprobar'
+                                          
                                            | not(elem (x,xs) visitadas) = min xs
                                              | otherwise = ciudadmenorcosto xss
   
