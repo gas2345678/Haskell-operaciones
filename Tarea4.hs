@@ -4,7 +4,9 @@ type Vertice = Int
 type Arista = (Vertice,Vertice)
 data Grafo = [(Arista,[Vertice])]
 
-type Ciudad = String
+data Vuelo (String,Integer)
+data Mapavuelos = [Vuelo,(Vuelo)]
+
 
 
 
@@ -25,7 +27,8 @@ recorrido2 = [(1,0),(3,1),(5,5),(6,7)]
 let mapavuelos = [('Newcastle',0),('Leeds',4),('Liverpool',6),('Sheffield',7)]
 
 
-
+ciudades :: Mapavuelos -> [Ciudad]
+ciudades ((x,xs) :xss) = [] : x : ciudades xss
 
 
 
