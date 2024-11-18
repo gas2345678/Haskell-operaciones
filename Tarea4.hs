@@ -6,3 +6,10 @@
 
 --Algorimo Djkastra
 
+
+
+let visitados = []
+
+
+
+
