@@ -4,7 +4,7 @@ type Costo = Int
 type Ciudad = String
 
 
-type Vuelo = (String,Costo)
+type Vuelo = (Ciudad,Costo)
 type Costos = [Vuelo]
 
 
