@@ -39,19 +39,23 @@ let m = [('Newcastle',0),('Leeds',4),('Liverpool',6),('Sheffield',7)]
 
 --2
 ciudades :: Mapavuelos -> [Ciudad]
-ciudades ((x,xs) :xss) =  x : ciudades xss
+ciudades ((x,xs) :xss) | [] = []  
+                       | otherwise =   x : ciudades xss
 --3
 initialCost :: [Ciudad] -> Costos
 initialCost (x,xs) =  (x,inf) : initialCost (xs)
 
 --4
 CostoCiudad :: Ciudad -> Costos -> Costo
-CostoCiudad ciudad (x,xi): (xs,xss) | [] = 0
-                                      | ciudad == x = xi
-                                      | otherwise = CostoCiudad xs
+CostoCiudad ciudad ((x,xs) : xss | ciudad == x = xs
+                                 | ciudad != x = CostoCiudad xss
+                                 | otherwise = error"no se pudo encontrar la ciudad"
+                                     
 --5 
-actualizarCosto :: Costos -> Ciudad -> Costo -> Costo
-actualizarCosto ((x,xss):xs) ciudad costo | x == ciudad && xs < costo = x : costo : actualizarCosto xs 
+actualizarCosto :: Costos -> Ciudad -> Costo -> Costos
+actualizarCosto ((x,xss):xs) ciudad costo | [] = []
+                                          | x == ciudad && costo < xss = x : costo : actualizarCosto xs
+                                          | otherwise = ((x,xss):xs)
 
 --6
 listaAdyentes :: Ciudad -> mapaVuelos -> (Ciudad,[(Ciudad,Costo)])
@@ -62,7 +66,9 @@ actualizarlistaAdyentes (x,(xs,xdd:xd,xss)) ((mm,m) :mo) =
 
 --8
 ciudadmenorcosto :: Costos -> Visitadas -> Ciudad
-ciudadmenorcosto ((x,xs) :xss) visitadas | [] = error 'no se pudo comprobar'
+ciudadmenorcosto ((x,xs) :xss) visitadas | [] visitadas = error "no se pudo comprobar"
+                                         | elem (x,xs) visitadas && elem xss visitadas = error"todas las ciudades fueron visitadas"
+                                         | not elem (x,xs) visitadas = xs : ciudadmenorcosto(min xss)
                           
                                           
                                            | not(elem (x,xs) visitadas) = min xs
