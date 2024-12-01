@@ -41,7 +41,7 @@ let m = [('Newcastle',0),('Leeds',4),('Liverpool',6),('Sheffield',7)]
 
 --2
 ciudades :: Mapavuelos -> [Ciudad]
-ciudades ((x,xs) :xss) = [] : x : ciudades xss
+ciudades ((x,xs) :xss) =  x : ciudades xss
 --3
 initialCost :: [Ciudad] -> Costos
 initialCost (x,xs) =  (x,inf) : initialCost (xs)
