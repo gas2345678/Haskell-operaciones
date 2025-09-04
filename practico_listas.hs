@@ -71,6 +71,10 @@ any p (x:xss) | [] = False
 
 all :: (Elemento -> Bool) -> [Elemento] -> Bool
 
+all p (x:xss) | [] = False
+              | not p x || not p xss = False 
+              | otherwise = True 
+
 
 
 
