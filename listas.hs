@@ -63,6 +63,46 @@ restolista xs = tail xs
 
 
 
+--FUNCIONES UTILES 
+
+
+--map:nos permite tomar una lista y aplicar una funcion a cada elemento de la misma.Por ejemplo, sumar uno a cada elemento 
+
+vector :: Integer -> Integer 
+vector x = x+1
+
+
+listamap = [1,2,3,4,5,6]
+
+listamod = map vector listamap
+--Esto devolveria [2,3,4,5,6,7]
+
+
+
+--reverse:devuelve una lista invertida
+
+
+lista_reversa :: NS -> NS 
+
+lista_reversa xs = reverse xs
+
+
+
+--length:Devuelve el largo de una lista o la cantidad de elementos de una lista 
+--Por lo tanto, devolvera un entero
+
+
+largo :: NS -> Int
+
+largo xs = length xs
+
+
+
+
+
+
+
+
 
 
 
